@@ -4,7 +4,7 @@ metadata:
   name: nginx
   namespace: default
 spec:
-  replicas: {{ .Values.replicaCount }}  
+  replicas: 3
   selector:
     matchLabels:
       app: nginx
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: {{ .Values.image.repository }}:{{ .Values.image.tag }} 
+        image: yakirmehager/final-project:8
         ports:
-        - containerPort: {{ .Values.containerPort }} 
+        - containerPort: 5001
