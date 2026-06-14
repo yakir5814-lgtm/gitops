@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: yakirmehager/final-project:10
+        image: yakirmehager/final-project:17
         ports:
         - containerPort: 5001
