@@ -17,4 +17,4 @@ spec:
       - name: nginx
         image: yakirmehager/final-project:7
         ports:
-        - containerPort: 80
+        - containerPort: 5001
