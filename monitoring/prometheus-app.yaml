@@ -9,14 +9,12 @@ spec:
     repoURL: https://prometheus-community.github.io/helm-charts
     chart: kube-prometheus-stack
     targetRevision: 66.0.0
-    helm:
-      values: |
-        grafana:
-          adminPassword: Aa123456
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: monitoring
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+helm:
+    values: |
+      grafana:
+        adminPassword: Aa123456
+        grafana.ini:
+          security:
+            allow_embedding: true
+          server:
+            root_url: http://localhost:3000
